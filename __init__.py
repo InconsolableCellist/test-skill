@@ -19,6 +19,8 @@ class TestSkill(MycroftSkill):
     def initialize(self):
         LOGGER.info("initializing TestSkill")
 
+        # below, change to .optionally("Artist"). \ 
+        # to replicate bug 
         test_intent = IntentBuilder("TestIntent"). \
                 require("TestKeyword"). \
                 require("Artist"). \
